@@ -11,7 +11,7 @@ const user = prisma.user;
 export class UserController{
 
     public async store(req: NextApiRequest,res: NextApiResponse){
-
+        
     }
 
 }
