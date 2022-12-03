@@ -3,12 +3,12 @@ import type { NextApiRequest, NextApiResponse } from 'next'
 import { ReturnAPI } from '../../app/resources/ReturnAPI'
 
 type Data = {
-    customize_this_next: boolean
+  customize_this_next: boolean
 }
 
 export default function handler(
   req: NextApiRequest,
   res: NextApiResponse<Data>
 ) {
-  return ReturnAPI.messageReturn(res,{error:false,message:"Customize This next running",developerMessage:"Customize This next running",data:null,statusHTTP:200})
+  return ReturnAPI.messageReturn(res, { error: false, message: "Customize This next running", developerMessage: "Customize This next running", data: null, statusHTTP: 200 })
 }

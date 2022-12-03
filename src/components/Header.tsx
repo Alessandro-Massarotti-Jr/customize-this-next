@@ -1,21 +1,34 @@
-import Image from "next/image"
-import Link from "next/link"
-import styles from "../styles/Header.module.css"
+import Link from "next/link";
+import { baseColors } from "../config/baseColorsConfig";
+import styles from "../styles/Header.module.css";
+import { Icon } from '@iconify/react';
+import NavLink, { NavLinkProps } from "./NavLink";
 
 export default function Header() {
+
+    const links: NavLinkProps[] = [
+        {
+            href: '/',
+            label: "login"
+        },
+        {
+            href: '/',
+            label: "Cadastre-se"
+        }
+    ]
+
     return (
-        <header className={styles.header}>
-            <Image src={"/vercel.svg"} alt="image" width={80} height={80} />
+        <header style={{ backgroundColor: baseColors.primary, color: baseColors.text }} className={styles.header}>
+            <Icon width={40} height={40} icon="mdi:pencil-circle-outline" style={{ color: baseColors.acents }} />
             <nav>
                 <ul>
-                    <li>
-                        <Link href={'/'}>Login</Link>
-                    </li>
-                    <li>
-                        <Link href={'/'}>Cadastre-se</Link>
-                    </li>
+                    {
+                        links.map((link) => {
+                            return <NavLink key={link.href} href={link.href} label={link.label} />
+                        })
+                    }
                 </ul>
             </nav>
-        </header>
+        </header >
     )
 }

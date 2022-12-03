@@ -8,10 +8,10 @@ const prisma = new PrismaClient();
 
 const user = prisma.user;
 
-export class UserController{
+export class UserController {
 
-    public async store(req: NextApiRequest,res: NextApiResponse){
-        
+    public async store(req: NextApiRequest, res: NextApiResponse) {
+        console.log('')
     }
 
 }
