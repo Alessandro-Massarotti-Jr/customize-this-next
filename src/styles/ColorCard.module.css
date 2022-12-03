@@ -1,0 +1,48 @@
+.colorCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    border-radius: 6px;
+    margin: 0px 10px;
+    min-height: 140px;
+}
+
+.colorCard__title {
+    display: flex;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    width: 100%;
+    justify-content: center;
+    border-bottom: 2px solid;
+    align-items: center;
+    font-size: 16px;
+    padding: 10px 20px;
+}
+
+.colorCard__colors {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    padding: 10px 20px;
+}
+
+.colors__container {
+    margin: 0px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.colors__container__currentColor {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid;
+}
+
+.colors__container__title {
+    font-size: 14px;
+}

@@ -9,7 +9,7 @@ export interface ColorsInterface {
 export const baseColors: ColorsInterface = {
     primary: '#020202',
     secondary: '#484848',
-    terciary: '#414141',
+    terciary: '#2f2f2f',
     text: '#f2f2f2',
     acents: '#15e0ff',
 }
