@@ -15,4 +15,19 @@ model User {
   deleted   Boolean  @default(false)
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
+  theme     Theme?   @relation(name: "user_theme")
+}
+
+model Theme {
+  id        String   @id @default(uuid())
+  user_id   String   @unique
+  user      User     @relation(name: "user_theme", fields: [user_id], references: [id])
+  primary   String   @default("#020202")
+  secondary String   @default("#484848")
+  terciary  String   @default("#2f2f2f")
+  text      String   @default("#f2f2f2")
+  acents    String   @default("#15e0ff")
+  deleted   Boolean  @default(false)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
 }
